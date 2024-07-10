@@ -1,5 +1,3 @@
-import java.util.*;
-
 public class Chapter11_Chapter2 {
     public static int[] reverse(int[] arr) {
         int[] reverseArr = new int[arr.length];
@@ -10,11 +8,11 @@ public class Chapter11_Chapter2 {
     }
 
     public static void main(String[] args) {
-        int i = 0;
+        int i;
         int[] intArr = {2, 4, 6};
         int[] revArr = reverse(intArr);
 
-        System.out.print("Reversed arryay: [");
+        System.out.print("Reversed array: [");
         for (i = 0;i < revArr.length - 1; i++) {
             System.out.print(revArr[i] + ", ");
         }

@@ -1,5 +1,4 @@
 import java.util.Scanner;
-import java.lang.Math;
 
 public class Chapter3_Prorgam6 {
     public static void main(String[] args) {
@@ -21,7 +20,7 @@ public class Chapter3_Prorgam6 {
         double salesTax = (carpetPricePerSquareFeet + labor) * 0.07;
 
         double totalCost = carpetPricePerSquareFeet + labor + salesTax;
-        double totalSales = totalCost;
+        double totalSales;
 
         System.out.println("Room: " + areaSquareFeet + " sq ft");
         System.out.printf("Carpet: $%.2f\n", carpetPricePerSquareFeet);
