@@ -35,8 +35,13 @@ public class ShoppingCart {
         cartItems.remove(itemName);
     }
 
-    public void modifyItem(String itemName) {
+    public void modifyItem(String itemName, String newDescription, int newPrice) {
         // Implement functionality to modify an item in the cart
+        for (int i = 0; i < cartItems.size(); i++) {
+            if (cartItems.get(i).equals(itemName)) {
+                break;
+            }
+        }
     }
 
     public int getNumItemsInCart() {
