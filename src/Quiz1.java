@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Quiz1 {
     public static void sum(int x, int y) {
         int sum = 0;
@@ -8,7 +10,24 @@ public class Quiz1 {
     }
 
     public static void main(String[] args) {
-        sum(1, 12);
+        Scanner scan = new Scanner(System.in);
+//        String s = "Go";
+//        int counter = 0;
+//        while ((!s.equals("q")) && (!s.equals("Q"))) {
+//            System.out.print("In loop");
+//            s = scan.next();
+//            counter++;
+//            System.out.println("Counter: " + counter);
+//        }
+
+       int y = 6;
+       int x = (1/ 2) * y + 8;
+
+       System.out.println("x: " + x);
+
+        double num1 = 1.0;
+        double num2 = -1.0;
+        System.out.println(32.0 +(num1 / (num2 + 1.0)));
         //Scanner scan = new Scanner(System.in);
 //        while (true) {
 //            System.out.print("Enter the activity");
