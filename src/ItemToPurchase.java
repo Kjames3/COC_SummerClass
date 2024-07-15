@@ -20,6 +20,7 @@ public class ItemToPurchase {
         itemQuantity = quantity;
     }
 
+    // Setters for properties
     public void setName(String name) {
         this.itemName = name;
     }
@@ -36,6 +37,7 @@ public class ItemToPurchase {
         this.itemQuantity = quantity;
     }
 
+    // Getters for properties
     public String getName() {
         return itemName;
     }
@@ -52,11 +54,12 @@ public class ItemToPurchase {
         return itemQuantity;
     }
 
+    // Printing methods
     public void printItemCost() {
         System.out.printf("%s %s @ $%d = $%d\n", itemName, itemQuantity, itemPrice, (itemPrice * itemQuantity));
     }
 
     public void printItemDescription() {
-        System.out.printf("%s: %s\n", itemName, itemDescription);
+        System.out.printf("%s: %s\n\n", itemName, itemDescription);
     }
 }
