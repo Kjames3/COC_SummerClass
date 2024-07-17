@@ -14,6 +14,7 @@ public class Chapter15_Program9 {
             includeChapter = scan.nextInt();
             if (includeChapter==1) {
                 chapList[i] = true;
+                isChapterSelected = true;
             }
             else {
                 chapList[i] = false;
@@ -23,39 +24,26 @@ public class Chapter15_Program9 {
         // Print the selected chapters with shorthand for ranges
         if (isChapterSelected) {
             int startRange = -1;
-            for (i = 0; i <= 15; i++) {
+            for (i = 1; i <= 15; i++) {
                 if (chapList[i]) {
                     if (startRange == -1) {
                         startRange = i;
                     }
-                } else {
-                    if (startRange != -1) {
-                        if (i - startRange == 1) {
+                    // Check if it's the end of a range or a single character
+                    if (i == 15 || chapList[i + 1]) {
+                        if (startRange == i) {
                             System.out.print(startRange + " ");
-                        } else if (i - startRange == 2) {
-                            System.out.print(startRange + " " + (startRange + 1) + " ");
                         } else {
-                            System.out.print(startRange + "-" + (i - 1) + " ");
+                            System.out.print(startRange + "-" + i + " ");
                         }
                         startRange = -1;
                     }
                 }
             }
-
-            // Print the last range if any
-            if (startRange != -1) {
-                if (15 - startRange == 1) {
-                    System.out.print(startRange + " ");
-                } else if (15 - startRange == 2) {
-                    System.out.print(startRange + " " + (startRange + 1) + " ");
-                } else {
-                    System.out.print(startRange + "-" + 15 + " ");
-                }
-            }
-
             System.out.println();
+
         } else {
-            System.out.println("None");
+            System.out.println("None ");
         }
     }
 }
