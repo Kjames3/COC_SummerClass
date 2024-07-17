@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Chapter13_Program2 {
     public static void printMenu() {
-        System.out.println("MENU");
+        System.out.println("\nMENU");
         System.out.println("a - Add item to cart");
         System.out.println("d - Remove item from cart");
         System.out.println("c - Change item quantity");
@@ -87,12 +87,16 @@ public class Chapter13_Program2 {
         System.out.println("Today's date: " + currentDate);
         System.out.println();
 
+        printMenu();
+
         char option = ' ';
         while (option != 'q') {
-            printMenu();
             System.out.println("Choose an option:");
             option = scanner.nextLine().charAt(0);
-            executeMenu(option, cart, scanner);
+            if (option == 'a' || option == 'd' || option == 'c' || option == 'i' || option == 'o') {
+                executeMenu(option, cart, scanner);
+                printMenu();
+            }
         }
 
         scanner.close();

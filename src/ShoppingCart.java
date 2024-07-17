@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class ShoppingCart {
     private String customerName;
@@ -108,8 +109,12 @@ public class ShoppingCart {
     public void printDescription() {
         System.out.println(customerName + "'s Shopping Cart - " + currentDate);
         System.out.println("\nItem Descriptions");
-        for (ItemToPurchase item : cartItems) {
+        for (int i = 0, cartItemsSize = cartItems.size(); i < cartItemsSize; i++) {
+            ItemToPurchase item = cartItems.get(i);
             item.printItemDescription();
+            if (i == cartItems.size() - 1) {
+                System.out.println();
+            }
         }
     }
 }

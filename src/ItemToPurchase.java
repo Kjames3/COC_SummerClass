@@ -60,6 +60,6 @@ public class ItemToPurchase {
     }
 
     public void printItemDescription() {
-        System.out.printf("%s: %s\n\n", itemName, itemDescription);
+        System.out.printf("%s: %s\n", itemName, itemDescription);
     }
 }
