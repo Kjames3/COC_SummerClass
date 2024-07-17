@@ -11,7 +11,6 @@ public class Chapter11_Program4 {
         System.out.println();
         System.out.println("Choose an option:");
     }
-
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         int[] jerseyNumbers = new int[5];
@@ -69,20 +68,26 @@ public class Chapter11_Program4 {
                     break;
 
                 case 'r':
-                    System.out.println();
                     System.out.println("Enter a jersey number:");
                     int oldJersey = scan.nextInt();
-                    System.out.println("Enter a new jersey number:");
-                    int newJersey = scan.nextInt();
-                    System.out.println("Enter a rating for the new player:");
-                    int newRating = scan.nextInt();
-                    scan.nextLine();
-                    for (int i = 0; i < 5; ++i) {
+                    int index = -1;
+                    // Check if oldJersey is in the list
+                    for (int i = 0; i < jerseyNumbers.length; ++i) {
                         if (jerseyNumbers[i] == oldJersey) {
-                            jerseyNumbers[i] = newJersey;
-                            ratings[i] = newRating;
+                            index = i;
+                            break;
                         }
                     }
+                    if (index != -1) {
+                        System.out.println("Enter a new jersey number:");
+                        int newJersey = scan.nextInt();
+                        System.out.println("Enter a rating for the new player:");
+                        int newRating = scan.nextInt();
+                        jerseyNumbers[index] = newJersey;
+                        ratings[index] = newRating;
+                    } //else {
+//                        System.out.println("Jersey number " + oldJersey + " not found in the roster.");
+//                    }
                     break;
             }
         } while (menuOption != 'q');
