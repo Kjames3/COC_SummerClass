@@ -2,17 +2,11 @@ import java.util.Scanner;
 
 public class Chapter15_Program46 {
     private static int getDaysInMonth(int month) {
-        switch (month) {
-            case 2:
-                return 28;
-            case 4:
-            case 6:
-            case 9:
-            case 11:
-                return 30;
-            default:
-                return 31;
-        }
+        return switch (month) {
+            case 2 -> 28;
+            case 4, 6, 9, 11 -> 30;
+            default -> 31;
+        };
     }
 
     public static void main(String[] args) {
