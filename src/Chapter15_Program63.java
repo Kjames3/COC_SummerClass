@@ -7,6 +7,8 @@ public class Chapter15_Program63 {
         // Declare and initialize variables
         String userText = scanner.nextLine();
 
+
+        // TODO: Fix problem here with the ? character
         // Remove spaces, numbers, special characters
         userText = userText.replaceAll("\\s+|\\d+|\\W", "");
 
