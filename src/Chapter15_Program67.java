@@ -11,5 +11,7 @@ public class Chapter15_Program67 {
 
         System.out.println();
 
+        scanner.close();
+
     }
 }
