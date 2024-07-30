@@ -11,6 +11,13 @@ public class Chapter15_Program67 {
 
         System.out.println();
 
+        for (int i = 0; i < triangleHeight; i++) {
+            for (int j = 0; j <= i; j++) {
+                System.out.print(triangleCharacter + " ");
+            }
+            System.out.println();
+        }
+
         scanner.close();
 
     }
